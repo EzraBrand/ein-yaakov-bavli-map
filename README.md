@@ -4,6 +4,8 @@
 
 Ein Yaakov on Sefaria has no daf references, so I made the map by matching the texts.
 
+**Browse it:** https://ezrabrand.github.io/ein-yaakov-bavli-map/ (filter by tractate, search by ref or Hebrew words).
+
 ## The file
 
 3,022 rows, one per Ein Yaakov passage that has a match in the Bavli.
@@ -57,6 +59,7 @@ Then:
 py -3.13 -I align_ein_yaakov.py   # per-segment coverage -> out/  (~2 min)
 py -3.13 -I map_ein_yaakov.py     # ein_yaakov_to_bavli.csv, plus a fuller local workbook in out/
 py -3.13 -I check_omission.py Berakhot 44b   # per-segment check of any amud
+py -3.13 -I build_page.py         # docs/index.html (GitHub Pages) from the CSV
 ```
 
 `out/ein_yaakov_bavli_map.xlsx` (local only) also has the match share, the printed Ein Yaakov section number (where the text gives it), Bekiut links, and a sheet from the Bavli side (every Bavli segment → its Ein Yaakov passage).
@@ -76,3 +79,4 @@ The folder has its own README with the full report, and the scripts and results.
 - **Bavli:** Sefaria, William Davidson Edition (Koren Noé Talmud with Steinsaltz commentary), CC-BY-NC.
 - **Ein Yaakov:** Sefaria's Hebrew text (Daat).
 - The short excerpts in the CSV come from these texts, under their licences.
+- Code: MIT (see [LICENSE](LICENSE)).
