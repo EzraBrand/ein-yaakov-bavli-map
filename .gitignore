@@ -1,0 +1,8 @@
+out/segments*.csv
+out/windows.csv
+out/amudim.csv
+ein_yaakov_raw/
+logs/
+__pycache__/
+out/ein_yaakov_bavli_map.xlsx
+out/ein_yaakov_bavli_map.csv
