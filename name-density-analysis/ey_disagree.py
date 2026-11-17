@@ -10,7 +10,7 @@ import pandas as pd
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"
-SEF = HERE.parent / "talmud-names-discovery" / "sefaria"
+SEF = HERE.parent.parent / "talmud-names-discovery" / "sefaria"
 df = pd.read_csv(OUT / "segments_ey.csv", encoding="utf-8-sig", keep_default_na=False)
 df = df[df.evaluable.astype(str) == "True"].reset_index(drop=True)
 WIN = 8

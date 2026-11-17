@@ -1,8 +1,9 @@
-out/segments*.csv
-out/windows.csv
-out/amudim.csv
+# local downloads and intermediate files
 ein_yaakov_raw/
+out/
 logs/
 __pycache__/
-out/ein_yaakov_bavli_map.xlsx
-out/ein_yaakov_bavli_map.csv
+name-density-analysis/gazetteers/
+name-density-analysis/out/segments*.csv
+name-density-analysis/out/windows.csv
+name-density-analysis/out/amudim.csv

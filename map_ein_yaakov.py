@@ -4,7 +4,8 @@ Each Bavli segment whose 4-gram coverage by Ein Yaakov is >= 0.4 is assigned to 
 the most 4-grams with. Each Ein Yaakov passage then gets the Bavli ranges of its assigned segments (a new range
 starts after a gap of more than GAP segments). Passages with no assigned segment get an anchor-based fallback span.
 
-Output: out/ein_yaakov_bavli_map.csv (one row per Ein Yaakov passage),
+Output: ein_yaakov_to_bavli.csv (repository root, the published table),
+        out/ein_yaakov_bavli_map.csv (one row per Ein Yaakov passage, all columns),
         out/bavli_segments_ein_yaakov.csv (one row per Bavli segment),
         out/ein_yaakov_bavli_map.xlsx (both sheets + notes)
 Run: py -3.13 -I map_ein_yaakov.py
@@ -187,5 +188,5 @@ gh = gh[["ey_url", "sefaria_url", "ey_words", "ey_start", "parallels_elsewhere"]
     "ey_url": "ey url - sefaria", "sefaria_url": "sefaria url", "ey_words": "ey words", "ey_start": "ey start",
     "parallels_elsewhere": "parallels elsewhere"})
 gh["ey words"] = gh["ey words"].astype("Int64")
-gh.to_csv(OUT / "ein_yaakov_to_bavli.csv", index=False, encoding="utf-8-sig")
+gh.to_csv(OUT.parent / "ein_yaakov_to_bavli.csv", index=False, encoding="utf-8-sig")
 print("GitHub CSV rows:", len(gh))

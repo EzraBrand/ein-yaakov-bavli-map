@@ -15,7 +15,7 @@ import pandas as pd
 sys.stdout.reconfigure(encoding="utf-8")
 OUT = Path(__file__).resolve().parent / "out"
 seg = pd.read_csv(OUT / "segments.csv", encoding="utf-8-sig", keep_default_na=False)
-cov = pd.read_csv(OUT / "ey_segment_coverage.csv", encoding="utf-8-sig")
+cov = pd.read_csv(OUT.parent.parent / "out" / "ey_segment_coverage.csv", encoding="utf-8-sig")
 df = seg.merge(cov, on=["tractate", "amud", "seg"], how="left")
 f2 = pd.read_csv(OUT / "segments_feat2.csv", encoding="utf-8-sig")
 df = df.merge(f2, on=["tractate", "amud", "seg"], how="left")

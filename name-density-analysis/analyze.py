@@ -12,7 +12,7 @@ import pandas as pd
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"
-SEF = HERE.parent / "talmud-names-discovery" / "sefaria"
+SEF = HERE.parent.parent / "talmud-names-discovery" / "sefaria"
 WIN = 8  # segments per passage window
 
 seg = pd.read_csv(OUT / "segments.csv", encoding="utf-8-sig", keep_default_na=False)

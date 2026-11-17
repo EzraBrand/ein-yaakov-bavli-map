@@ -8,7 +8,7 @@ import pandas as pd
 
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = Path(__file__).resolve().parent
-SEF = HERE.parent / "talmud-names-discovery" / "sefaria"
+SEF = HERE.parent.parent / "talmud-names-discovery" / "sefaria"
 OUT = HERE / "out"
 am = pd.read_csv(OUT / "amudim.csv", encoding="utf-8-sig")
 GEM = re.compile(r"The Gemara (?:asks|answers|explains|rejects|raises|challenges|suggests|clarifies|resolves|"

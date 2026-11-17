@@ -12,7 +12,6 @@ from align_ein_yaakov import EY, NAME_MAP, NIKUD, SEF, TAG, flat, skel_words  # 
 
 OUT = Path(__file__).resolve().parent / "out"
 seg = pd.read_csv(OUT / "bavli_segments_ein_yaakov.csv", encoding="utf-8-sig", keep_default_na=False)
-eng = pd.read_csv(OUT / "segments.csv", encoding="utf-8-sig", keep_default_na=False, usecols=["ref", "is_mishna"])
 # all of Ein Yaakov as one 3-gram set, with the passage of each 3-gram
 where = {}
 for k, chs in EY.items():

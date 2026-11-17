@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = Path(__file__).resolve().parent
-SEF = HERE.parent / "talmud-names-discovery" / "sefaria"
+SEF = HERE.parent.parent / "talmud-names-discovery" / "sefaria"
 OUT = HERE / "out"
 TAG = re.compile(r"<[^>]+>")
 
